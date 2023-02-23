@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .table {
+        margin: 10rem auto;
+        font-size: 0.9rem;
+        min-width: 400px;
+        border-collapse: collapse;
+        min-width: 800px;
+      }
+      .table tr,
+      .table td,
+      .table th {
+        border: 2px solid white;
+      }
+      .table thead tr {
+        background-color: yellow;
+        font-weight: bold;
+        text-align: left;
+      }
+      .table th,
+      .table td {
+        padding: 5px 5px;
+      }
+      .table tbody tr :nth-child(1) {
+        background-color: yellow;
+      }
+      .table thead tr :nth-child(3),
+      .table tbody tr :nth-child(3) {
+        background-color: rgb(255, 85, 0);
+      }
+      .table tbody :nth-child(2) :nth-child(3) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ name }}</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Location</th>
+          <th>Accmodation</th>
+          <th>Trip</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Day 01</td>
+          <td>Houston City Centre</td>
+          <td>Conference Room</td>
+          <td>No</td>
+          <td>Orientation</td>
+        </tr>
+        <tr>
+          <td>Day 02</td>
+          <td>Adrien Event Center</td>
+          <td>Walton centre</td>
+          <td>Yes</td>
+          <td>Haluman magic Show</td>
+        </tr>
+        <tr>
+          <td>Day 03</td>
+          <td>The Asswell</td>
+          <td>Germinest Wincher puh</td>
+          <td>Yes</td>
+          <td>marin harion Show</td>
+        </tr>
+        <tr>
+          <td>Day 04</td>
+          <td>Tuileren Garden</td>
+          <td>Churchill Inn</td>
+          <td>Yes</td>
+          <td>Picnic</td>
+        </tr>
+        <tr>
+          <td>Day 05</td>
+          <td>Montmare</td>
+          <td>Chompo Hotel</td>
+          <td>No</td>
+          <td>Farewell</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
