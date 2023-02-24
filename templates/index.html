@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
+    <title>HomePage</title>
     <style>
       * {
         padding: 0;
@@ -45,53 +45,33 @@
     </style>
   </head>
   <body>
-    <h1>{{ name }}</h1>
     <table class="table">
       <thead>
         <tr>
-          <th>Day</th>
-          <th>Location</th>
-          <th>Accmodation</th>
-          <th>Trip</th>
-          <th>Activity</th>
+          <th scope="col">ID</th>
+          <th scope="col">NAME</th>
+          <th scope="col">BARCODE</th>
+          <th scope="col">PRICE</th>
+          <th scope="col">DISCOUNT</th>
         </tr>
       </thead>
       <tbody>
+        {% for item in list%}
         <tr>
-          <td>Day 01</td>
-          <td>Houston City Centre</td>
-          <td>Conference Room</td>
-          <td>No</td>
-          <td>Orientation</td>
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.barcode }}</td>
+          <td>{{ item.price }}$</td>
+
+          {% if item.price < 3000 %}
+          <td>5%</td>
+          {% elif item.price >= 3000 and item.price <= 23000 %}
+          <td>10%</td>
+          {% else %}
+          <td>20%</td>
+          {% endif %}
         </tr>
-        <tr>
-          <td>Day 02</td>
-          <td>Adrien Event Center</td>
-          <td>Walton centre</td>
-          <td>Yes</td>
-          <td>Haluman magic Show</td>
-        </tr>
-        <tr>
-          <td>Day 03</td>
-          <td>The Asswell</td>
-          <td>Germinest Wincher puh</td>
-          <td>Yes</td>
-          <td>marin harion Show</td>
-        </tr>
-        <tr>
-          <td>Day 04</td>
-          <td>Tuileren Garden</td>
-          <td>Churchill Inn</td>
-          <td>Yes</td>
-          <td>Picnic</td>
-        </tr>
-        <tr>
-          <td>Day 05</td>
-          <td>Montmare</td>
-          <td>Chompo Hotel</td>
-          <td>No</td>
-          <td>Farewell</td>
-        </tr>
+        {%endfor%}
       </tbody>
     </table>
   </body>
